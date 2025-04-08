@@ -20,4 +20,4 @@ git push origin main
 
 > Vista previa del index.html
 
-![Index]()
+![Index](https://raw.githubusercontent.com/HectorVal2196/CH53_DOM/refs/heads/main/images/imagenIndex.jpg)
