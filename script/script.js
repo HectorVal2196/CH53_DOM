@@ -22,7 +22,20 @@ console.log(otrosElementos.length)
 btnMostrar.addEventListener("click", function(event){
     event.preventDefault(); // no hagas lo que haces por defecto
     console.log("boton btnModificar presionado");
-}); // Accionar un boton
+
+    let element = document.createElement("li");
+    element.innerText="Another item"; // <li>Another item</li>
+    element.classList.add("list-group-item");
+
+    let element2 = element.cloneNode(true);
+
+    //lista.item(0).before(element); inserta el elemento antes de la lista
+    //lista.item(0).prepend(element2); inserta el inicio de la lista
+    lista.item(0).append(element); // inserta el elemento al final de la lista
+    lista.item(0).after(element2); // inserta el elemento despues de la lista
+    
+
+}); // Accionar un boton y agregar un elemento li 
 
 // https://developer.mozilla.org/es/docs/Web/Events
 // https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_operators#asignacion
