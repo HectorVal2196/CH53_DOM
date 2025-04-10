@@ -20,4 +20,4 @@ git push origin main
 
 > Vista previa del index.html
 
-![Index](https://raw.githubusercontent.com/HectorVal2196/CH53_DOM/refs/heads/main/images/imagenIndex.jpg)
+![Index](https://github.com/HectorVal2196/CH53_DOM/blob/main/images/Captura%20de%20pantalla%202025-04-10%20094052.jpg)
