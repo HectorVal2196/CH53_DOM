@@ -7,6 +7,9 @@ let elemento = document.getElementsByClassName("list-group-item") //Llamar eleme
 let otroElemento = document.querySelector("ul>li")
 let otrosElementos = document.querySelectorAll("ul>li")
 let btnMostrar = document.getElementById("btnMostrar") //Accionar un boton
+let txtRFC = document.getElementById("txtRFC");
+let txtCURP = document.getElementById("txtCURP");
+let txtTelefono = document.getElementById("txtTelefono");
 
 encabezado1.innerHTML = "<em>Ejercicio</em> DOM"; // Llamar elementos por id
 encabezado2.innerText = "DOM Exercise"; // Llamar elementos por id
@@ -40,6 +43,23 @@ btnMostrar.addEventListener("click", function(event){
     lista.item(1).insertAdjacentHTML("beforebegin", `<li class="list-group-item">Before Begin Item</li>`);
 
 }); // Accionar un boton y agregar un elemento li 
+
+window.addEventListener("load",function(event){
+    console.log("se termino de cargar la pagina");
+});
+
+function txtToUpper(event){
+    event.target.value = event.target.value.trim().toUpperCase();
+}
+// blur -> cuando se sale del campo
+txtRFC.addEventListener("blur", txtToUpper);
+txtCURP.addEventListener("blur",txtToUpper);
+
+txtTelefono.addEventListener("blur", function (event){
+    event.preventDefault();
+    txtTelefono.value = txtTelefono.value.trim().slice(0,10);
+});
+
 
 // https://developer.mozilla.org/es/docs/Web/Events
 // https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_operators#asignacion
